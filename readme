@@ -1,31 +1,31 @@
-# Project Name
+# Projeto Microfrontends
 
-This project is an example of a Microfrontends architecture, where multiple teams can work on different parts of the application independently, using different technologies and frameworks.
+Este projeto é um exemplo de arquitetura Microfrontends, onde múltiplas equipes podem trabalhar em diferentes partes da aplicação de forma independente, utilizando diferentes tecnologias e frameworks.
 
-## Architecture
+## Arquitetura
 
-The application is composed of multiple Microfrontends, each responsible for a specific feature or functionality. Each Microfrontend is a standalone application, built using a different technology or framework, and can be deployed and updated independently.
+A aplicação é composta por múltiplos Microfrontends, cada um responsável por um recurso ou funcionalidade específica. Cada Microfrontend é um aplicativo independente, construído usando uma tecnologia ou estrutura diferente, e pode ser implantado e atualizado de forma independente.
 
-The Microfrontends communicate with each other using a shared API, which defines the contract between them. This allows each team to work on their Microfrontend without worrying about the implementation details of the others.
+Os Microfrontends se comunicam entre si por meio de uma API compartilhada, que define o contrato entre eles. Isso permite que cada equipe trabalhe em seu Microfrontend sem se preocupar com os detalhes de implementação dos demais.
 
-## Getting Started
+## Começando
 
-To run the application, you need to start each Microfrontend separately. Each Microfrontend has its own README file with instructions on how to run it.
+Para executar o aplicativo, você precisa iniciar cada Microfrontend separadamente. Cada Microfrontend possui seu próprio arquivo README com instruções sobre como executá-lo.
 
-1. Clone the repository
-2. Navigate to the directory of the Microfrontend you want to run
-3. Follow the instructions in the README file of that Microfrontend
+1. Clone o repositório
+2. Navegue até o diretório do Microfrontend que deseja executar
+3. Siga as instruções no arquivo README desse Microfrontend
 
-## Contributing
+## Contribuindo
 
-If you want to contribute to this project, please follow these steps:
+Se você quiser contribuir com este projeto, siga estas etapas:
 
-1. Fork the repository
-2. Create a new branch for your feature or bug fix
-3. Make your changes and commit them
-4. Push your changes to your fork
-5. Create a pull request
+1. Bifurque o repositório
+2. Crie um novo branch para seu recurso ou correção de bug
+3. Faça suas alterações e confirme-as
+4. Envie suas alterações para seu fork
+5. Crie uma solicitação pull
 
-## License
+## Licença
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE para obter detalhes.
