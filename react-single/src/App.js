@@ -1,34 +1,51 @@
 import React, { useState } from 'react';
+import { Container, Typography, TextField, Button } from '@mui/material';
 
 function App() {
-    const [peso, setPeso] = useState('');
-    const [altura, setAltura] = useState('');
-    const [resultado, setResultado] = useState('');
+  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState('');
+  const [result, setResult] = useState('');
 
-    function calcularIMC() {
-        const imc = peso / (altura * altura);
-        setResultado(`Seu IMC é ${imc.toFixed(2)}`);
+  const calculateIMC = () => {
+    if (weight && height) {
+      const weightInKg = parseFloat(weight);
+      const heightInM = parseFloat(height) / 100;
+      const imc = (weightInKg / (heightInM * heightInM)).toFixed(2);
+      setResult(`Seu IMC é: ${imc}`);
+    } else {
+      setResult('Preencha o peso e a altura.');
     }
+  };
 
-    return (
-        <div>
-            <h1>Calculadora de IMC</h1>
-            <form>
-                <label>
-                    Peso (kg):
-                    <input type="number" value={peso} onChange={(e) => setPeso(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Altura (m):
-                    <input type="number" step="0.01" value={altura} onChange={(e) => setAltura(e.target.value)} />
-                </label>
-                <br />
-                <button type="button" onClick={calcularIMC}>Calcular</button>
-            </form>
-            <p>{resultado}</p>
-        </div>
-    );
+  return (
+    <Container maxWidth="sm" style={{ marginTop: '50px' }}>
+      <Typography variant="h4" gutterBottom>
+        Calculadora de IMC
+      </Typography>
+      <TextField
+        label="Peso (em kg)"
+        variant="outlined"
+        fullWidth
+        value={weight}
+        onChange={(e) => setWeight(e.target.value)}
+        style={{ marginBottom: '20px' }}
+      />
+      <TextField
+        label="Altura (em cm)"
+        variant="outlined"
+        fullWidth
+        value={height}
+        onChange={(e) => setHeight(e.target.value)}
+        style={{ marginBottom: '20px' }}
+      />
+      <Button variant="contained" color="primary" onClick={calculateIMC}>
+        Calcular IMC
+      </Button>
+      <Typography variant="h6" style={{ marginTop: '20px' }}>
+        {result}
+      </Typography>
+    </Container>
+  );
 }
 
 export default App;
